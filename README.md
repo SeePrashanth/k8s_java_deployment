@@ -34,7 +34,7 @@ Step7: WORKER NODE Create node-group: eksctl create nodegroup --cluster=eksdemo
 --nodes-max=4
 --node-volume-size=10
 --ssh-access
---ssh-public-key=Praveen-test
+--ssh-public-key=Prashanth-test
 --managed
 --asg-access
 --external-dns-access
@@ -56,16 +56,16 @@ Build each project ->> mvn clean install -DskipTests
 
 Create docker hub account
 
-Build the image in local -> docker build -t praveensingam1994/shopfront:latest .
+Build the image in local -> docker build -t 97367/shopfront:latest .
 
-docker build -t praveensingam1994/productcatalogue:latest .
+docker build -t 97367/productcatalogue:latest .
 
-docker build -t praveensingam1994/stockmanager:latest .
+docker build -t 97367/stockmanager:latest .
 
-Push the image to your docker hub -> docker push praveensingam1994/shopfront:latest
-docker push praveensingam1994/productcatalogue:latest
+Push the image to your docker hub -> docker push 97367/shopfront:latest
+docker push 97367/productcatalogue:latest
 
-docker push praveensingam1994/stockmanager:latest
+docker push 97367/stockmanager:latest
 
 Go to kubernetes folder and create the pods ->
 kubectl apply -f shopfront-service.yaml
